@@ -3,6 +3,7 @@ import circleIcon from "../assets/circle.png";
 import crossIcon from "../assets/cross.png";
 
 export const TicTacToe = () => {
+  // array
   const [board, setBoard] = useState(Array(9).fill(""));
   const [count, setCount] = useState(0);
   const [lock, setLock] = useState(false);
@@ -69,6 +70,33 @@ export const TicTacToe = () => {
     }
   }, [board]);
 
+  let statusMessage = null;
+  if (winner === "X") {
+    statusMessage = (
+      <h2 className="text-4xl font-bold text-amber-300 mb-5">
+        The winner is: {winner}
+      </h2>
+    );
+  } else if (winner === "O") {
+    statusMessage = (
+      <h2 className="text-4xl font-bold text-emerald-400 mb-5">
+        The winner is: {winner}
+      </h2>
+    );
+  } else if (tie) {
+    statusMessage = (
+      <h2 className="text-4xl font-bold text-cyan-400 mb-5">
+        It&apos;s a tie!
+      </h2>
+    );
+  } else {
+    statusMessage = (
+      <h2 className="text-4xl font-bold text-transparent mb-5">
+        The winner is:
+      </h2>
+    );
+  }
+
   return (
     <div className="h-[100vh] w-[100vw] bg-slate-900 text-cyan-100 text-6xl font-bold flex flex-col justify-center items-center">
       <h1 className="mb-4">
@@ -76,20 +104,7 @@ export const TicTacToe = () => {
         <span className="text-cyan-400">Tac</span>
         <span className="text-emerald-400">Toe</span>
       </h1>
-      {winner ? (
-        <h2 className="text-5xl font-bold text-emerald-400 mb-8">
-          The winner is: {winner}
-        </h2>
-      ) : (
-        <h2 className="text-5xl font-bold text-transparent mb-8">
-          The winner is:
-        </h2>
-      )}
-      {tie && (
-        <h2 className="text-5xl font-bold text-emerald-400 mb-8">
-          It's a tie!
-        </h2>
-      )}
+      {statusMessage}
       <div className="board">
         {[0, 1, 2].map((row) => (
           <div key={row} className={`row${row + 1} flex`}>
@@ -110,7 +125,7 @@ export const TicTacToe = () => {
       </div>
       <button
         onClick={reset}
-        className="px-6 py-3 m-1 text-[2.5rem] rounded-lg bg-emerald-600/70 hover:bg-emerald-400 mt-10"
+        className="px-6 py-3 mt-15 text-[2.5rem] rounded-lg bg-emerald-600/70 hover:bg-emerald-400"
       >
         RESET
       </button>

@@ -8,7 +8,6 @@ L’obiettivo è fornire un gioco funzionante e completo con le seguenti caratte
 - **Controllo automatico del vincitore** su righe, colonne e diagonali.
 - **Gestione delle partite finite in pareggio**.
 - **Reset rapido della partita** per iniziare una nuova sfida.
-- **Indicatore del turno corrente**.
 - **Layout responsive** per un’esperienza ottimale anche su mobile.
 
 ---
@@ -26,7 +25,7 @@ L’obiettivo è fornire un gioco funzionante e completo con le seguenti caratte
 Clona il repository e installa le dipendenze:
 
 ```bash
-git clone https://github.com/tuo-username/tic-tac-toe.git
+git clone https://github.com/BassaniDavid/tic-tac-toe.git
 cd tic-tac-toe
 npm install
 ```
