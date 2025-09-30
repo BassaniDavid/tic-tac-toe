@@ -1,5 +1,11 @@
 # Tic Tac Toe App
 
+pagina accessibile al seguente link: [https://bassanidavid.github.io/tic-tac-toe/](https://bassanidavid.github.io/tic-tac-toe/)
+
+---
+
+# Tic Tac Toe
+
 Applicazione **Tic Tac Toe** sviluppata con **React**, **Vite** e **Tailwind CSS**.
 L’obiettivo è fornire un gioco funzionante e completo con le seguenti caratteristiche fondamentali:
 
